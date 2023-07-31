@@ -1,0 +1,35 @@
+<html>
+<head>
+<tile></title>
+<body>
+<script>
+  window.onload=function(){
+     getmarks();
+  }
+
+  function getmarks(){ 
+     var total=0;
+     for(var i=0;i<5;i++){
+        var marks=parseInt(window.prompt("Enter Marks:"));
+        total+=marks;
+     }
+     var average=total/5;
+     document.write("total: ",total);
+     document.write("<br>");
+     document.write("average: ",total/5);
+     document.write("<br>");
+     
+     var button= document.createElement("button");
+     button.innerHTML="GRADE";
+     button.onclick=function(){
+        if(average>30)
+          {window.alert("congradulations!");}
+        else
+          {window.alert("BETTER TRY NEXT TIME");}
+     };
+     document.body.appendChild(button);
+
+ }
+</script>
+</body>
+</html>
